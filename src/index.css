@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #000000;
+    color: #F6F5F3;
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-glass backdrop-blur-glass border border-white/10 rounded-xl;
+  }
+  
+  .glass-card:hover {
+    @apply border-primary-gold/50;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-green text-primary-white px-6 py-3 rounded-lg font-medium uppercase tracking-button transition-all duration-300 hover:bg-primary-green/80 hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border-2 border-primary-gold text-primary-gold px-6 py-3 rounded-lg font-medium uppercase tracking-button transition-all duration-300 hover:bg-primary-gold hover:text-primary-black;
+  }
+  
+  .gradient-bg {
+    background: linear-gradient(135deg, rgba(88, 125, 61, 0.1) 0%, rgba(201, 162, 76, 0.1) 100%);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #587D3D;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C9A24C;
+}
